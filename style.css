@@ -1,0 +1,219 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: rgb(121,9,117);
+  background: linear-gradient(90deg, rgba(121,9,117,1) 40%, rgba(102,0,255,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130vh;
+
+}
+
+.todos{
+  width: 80%;
+  box-shadow: 0 0 1rem 0 #0000;
+  border-radius: 15px;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.secao-topo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.logo{
+  width: 50px;
+  margin: 30px 0;
+}
+
+nav{
+width: 100%;
+text-align: right;
+
+}
+
+ul li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+a:hover{
+  color: #f05283;                  
+}
+
+
+.secao-conteudo{
+display: flex;
+justify-content: space-between;
+text-align: left;
+margin: 100px 0;
+}
+
+.caixa-um{
+  margin-left: 50px;
+  position: relative;
+
+}
+
+h2{
+  font-size: 54px;
+}
+h3{
+  font-size: 30px;
+  color: #707070;
+  font-weight: 100;
+  margin: 20px 0;
+}
+h4{
+  font-size: 20px;
+  color: #000;
+  margin: 30px 0;
+  font-weight: 500;
+}
+
+.caixa-um p {
+  font-size: 16px;
+  color: #b7b7b7;
+  font-weight: 100;
+}
+
+.caixa-um::before{
+  content: "";
+  width: 10px;
+  height: 57%;
+  background: linear-gradient(#f05283, #ff6062);
+  position: absolute;
+  left: -40px;
+  top: 8px;
+}
+.btn{
+  width: 140px;
+  border: none;
+  padding: 12px 10px;
+  outline: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #f05283;
+  z-index: 2;
+}
+
+.btn-dois{
+  z-index: 2;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  
+}
+
+.btn-dois img{
+  height: 45px;
+  width: 45px;
+}
+
+.caixa-dois{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.controle{
+  width: 70%;
+  z-index: 2;
+  left: 35px;
+  animation: moveControle 2s infinite alternate ease-in-out;
+}
+
+.caixa-colorida{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #f05283;
+  height: 100%;
+  width: 80%;
+  z-index: 1;
+  border-radius: 20px 0 0 20px;
+  transform: translatex(150px);
+}
+
+.roda-pe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.roda-pe img{
+  height: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.menu-icon{
+  width: 25px;
+  margin-right: 15px;
+  display: none;
+}
+
+
+@media (max-width: 760px){
+  #menu-list{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    overflow: hidden;
+    
+  }
+  .menu-icon{
+    display: block;
+  }
+
+  .nav-li{
+    display: block;
+    margin-top: 5px;
+  }
+  .todos{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+  .secao-conteudo{
+    flex-direction: column-reverse;
+  }
+
+  .caixa-dois{
+    margin-bottom: 30px;
+  }
+}
+
+@keyframes moveControle{
+  from{
+    transform: translate(-5%, -5%) rotate(-5deg);
+  }
+}
